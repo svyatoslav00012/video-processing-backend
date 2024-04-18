@@ -1,0 +1,45 @@
+{
+  "name": "video-processing-backend",
+  "module": "index.ts",
+  "type": "module",
+  "scripts": {
+    "start": "bun run --watch src/index.ts",
+    "build-for-bun": "bun build src/index.ts --outdir ./build --target bun",
+    "build-for-node": "bun build src/index.ts --outdir ./build --target node",
+    "run-node": "node build/index.js",
+    "tsc-watch": "tsc --watch",
+    "generate-migration": "drizzle-kit generate:pg",
+    "migrate": "bun run pg/migrate.ts",
+    "drizzle-studio": "drizzle-kit studio"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@types/cookie-parser": "^1.4.7",
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.21",
+    "@types/express-fileupload": "^1.5.0",
+    "@types/jsonwebtoken": "^9.0.6",
+    "@types/mongoose": "^5.11.97",
+    "@types/multer": "^1.4.11",
+    "@types/pg": "^8.11.5",
+    "dotenv": "^16.4.5",
+    "drizzle-kit": "^0.20.14"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "axios": "^1.6.8",
+    "body-parser": "^1.20.2",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "drizzle-orm": "^0.30.8",
+    "express": "^4.19.2",
+    "express-async-handler": "^1.2.0",
+    "express-fileupload": "^1.5.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.3.2",
+    "multer": "^1.4.5-lts.1",
+    "pg": "^8.11.5"
+  }
+}

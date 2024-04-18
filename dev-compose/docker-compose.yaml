@@ -1,0 +1,36 @@
+version: '3.8'
+services:
+#  redis:
+#    container_name: vp-redis
+#    image: redis
+#    restart: always
+#    command: redis-server --save 2 1
+#    ports:
+#      - '6380:6379'
+#    volumes:
+#      - ./redis-volume/all:/data
+#      - ./redis-volume/dump.rdb:/dump.rdb
+
+  postgres:
+    container_name: vp-postgres
+    image: postgres:14
+    restart: always
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./pg-volume:/var/lib/postgresql/data
+    environment:
+      POSTGRES_PASSWORD: postgrespassword
+      POSTGRES_DB: videoprocessing
+
+  mongo:
+    container_name: vp-mongo
+    image: mongo
+    restart: always
+    ports:
+      - "27017:27017"
+    volumes:
+      - ./mongo-volume:/data/db
+#    environment:
+#      MONGO_INITDB_ROOT_USERNAME: root
+#      MONGO_INITDB_ROOT_PASSWORD: rootpassword
