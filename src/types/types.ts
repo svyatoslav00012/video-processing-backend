@@ -60,5 +60,6 @@ export type SubmitVideoDTO = {
 
 export type FileMeta = {
     name: string,
-    url: string,
+    serverFileName: string,
+    // url: string,
 }

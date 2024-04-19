@@ -16,11 +16,13 @@ const videoSchema = new Schema<SubmittedVideo>({
     userId: {type: Number, index: true},
     videoFile: {
         name: String,
-        url: String
+        // url: String
+        serverFileName: String
     },
     micAudioFile: {
         name: String,
-        url: String
+        // url: String
+        serverFileName: String
     },
     previewSdUrl: String,
     previewHdUrl: String,
@@ -50,7 +52,8 @@ const videoSchema = new Schema<SubmittedVideo>({
     },
     outputFile: {
         name: String,
-        url: String
+        // url: String,
+        serverFileName: String
     }
 });
 

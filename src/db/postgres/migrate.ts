@@ -1,7 +1,7 @@
 import { migrate } from 'drizzle-orm/node-postgres/migrator';
 import {Client} from "pg";
 import {drizzle} from "drizzle-orm/node-postgres";
-import {Config} from "../src/config.ts";
+import {Config} from "../../config.ts";
 
 const client = new Client({
     host: Config.psql.HOST,

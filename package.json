@@ -9,7 +9,7 @@
     "run-node": "node build/index.js",
     "tsc-watch": "tsc --watch",
     "generate-migration": "drizzle-kit generate:pg",
-    "migrate": "bun run pg/migrate.ts",
+    "migrate": "bun run src/db/postgres/migrate.ts",
     "drizzle-studio": "drizzle-kit studio"
   },
   "devDependencies": {

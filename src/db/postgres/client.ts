@@ -1,7 +1,7 @@
 import {drizzle} from "drizzle-orm/node-postgres";
 import {Client} from "pg";
 import {Config} from "../../config.ts";
-import * as schema from '../../../pg/schema'
+import * as schema from './schema'
 
 const client = new Client({
     host: Config.psql.HOST,
